@@ -15,6 +15,5 @@ echo “enter commit message : ”
 read commitmsg
 Git commit -m “$commitmsg”
 branch =$(git symbolic-ref —-short HEAD)
-read branchname
-git push origin $branchname
+git push origin $branch
 cd $HOME
