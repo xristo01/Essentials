@@ -5,7 +5,7 @@ git pull https://github.com/life-efficient/Essentials
 git commit -m “Pull changes from original essenstials”
 git push 
 echo “please enter a branch name: ”
-read branch name 
+read branchname 
 git branch $branchname 
 git checkout $branchname
 eval "$(conda shell.zsh hook)"
