@@ -7,13 +7,13 @@ git push
 echo “please enter a branch name: ”
 read branch name 
 git branch $branchname 
-git checkout 
+git checkout $branchname
 eval "$(conda shell.zsh hook)"
 conda activate AiCore
 jupyter notebook
 git add .
 echo “enter commit message : ”
 read commitmsg
-Git commit -m “$commitmsg”
+git commit -m “$commitmsg”
 git push origin $branchname
 cd $HOME
