@@ -8,12 +8,12 @@ echo “please enter a branch name: ”
 read branch name 
 git branch $branchname 
 git checkout 
+eval "$(conda shell.zsh hook)"
 conda activate AiCore
 jupyter notebook
 git add .
 echo “enter commit message : ”
 read commitmsg
 Git commit -m “$commitmsg”
-branch =$(git symbolic-ref —-short HEAD)
-git push origin $branch
+git push origin $branchname
 cd $HOME
